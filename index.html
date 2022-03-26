@@ -7,9 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <meta
             name="description"
-            content="Documentation for the Kittn API"
+            content="Documentación de las APIs de duqto."
         >
-    <title>API Reference</title>
+    <title>Manual de Usuario</title>
 
     <style media="screen">
       .highlight table td { padding: 5px; }
@@ -286,7 +286,7 @@
   color: #859900;
 }
     </style>
-    <link href="stylesheets/screen-c9d8fa83.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/screen-c352d498.css" rel="stylesheet" media="screen" />
     <link href="stylesheets/print-953e3353.css" rel="stylesheet" media="print" />
       <script src="javascripts/all-b12a2749.js"></script>
 
@@ -295,7 +295,7 @@
     </script>
   </head>
 
-  <body class="index" data-languages="[&quot;shell&quot;,&quot;ruby&quot;,&quot;python&quot;,&quot;javascript&quot;]">
+  <body class="index" data-languages="[&quot;shell&quot;]">
     <a href="#" id="nav-button">
       <span>
         NAV
@@ -303,12 +303,9 @@
       </span>
     </a>
     <div class="toc-wrapper">
-      <img src="images/logo-1e815a84.png" class="logo" alt="" />
+      <img src="images/logo-f615e615.png" class="logo" alt="" />
         <div class="lang-selector">
               <a href="#" data-language-name="shell">shell</a>
-              <a href="#" data-language-name="ruby">ruby</a>
-              <a href="#" data-language-name="python">python</a>
-              <a href="#" data-language-name="javascript">javascript</a>
         </div>
         <div class="search">
           <input type="text" class="search" id="input-search" placeholder="Search">
@@ -316,222 +313,239 @@
         <ul class="search-results"></ul>
       <ul id="toc" class="toc-list-h1">
           <li>
-            <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
-          </li>
-          <li>
-            <a href="#authentication" class="toc-h1 toc-link" data-title="Authentication">Authentication</a>
-          </li>
-          <li>
-            <a href="#kittens" class="toc-h1 toc-link" data-title="Kittens">Kittens</a>
+            <a href="#getting-started" class="toc-h1 toc-link" data-title="Getting Started">Getting Started</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#get-all-kittens" class="toc-h2 toc-link" data-title="Get All Kittens">Get All Kittens</a>
+                    <a href="#registro" class="toc-h2 toc-link" data-title="Registro">Registro</a>
                   </li>
                   <li>
-                    <a href="#get-a-specific-kitten" class="toc-h2 toc-link" data-title="Get a Specific Kitten">Get a Specific Kitten</a>
+                    <a href="#login-al-portal-del-desarrollador" class="toc-h2 toc-link" data-title="Login al portal del desarrollador">Login al portal del desarrollador</a>
                   </li>
                   <li>
-                    <a href="#delete-a-specific-kitten" class="toc-h2 toc-link" data-title="Delete a Specific Kitten">Delete a Specific Kitten</a>
+                    <a href="#suscribirse-a-un-api" class="toc-h2 toc-link" data-title="Suscribirse a un API">Suscribirse a un API</a>
+                  </li>
+                  <li>
+                    <a href="#mi-espacio" class="toc-h2 toc-link" data-title="Mi espacio">Mi espacio</a>
                   </li>
               </ul>
           </li>
           <li>
-            <a href="#errors" class="toc-h1 toc-link" data-title="Errors">Errors</a>
+            <a href="#autenticacion" class="toc-h1 toc-link" data-title="Autenticación">Autenticación</a>
+          </li>
+          <li>
+            <a href="#vector-de-precios" class="toc-h1 toc-link" data-title="Vector de Precios">Vector de Precios</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#obtener-vector-de-precios-de-renta-fija" class="toc-h2 toc-link" data-title="Obtener Vector de Precios de Renta Fija">Obtener Vector de Precios de Renta Fija</a>
+                  </li>
+                  <li>
+                    <a href="#obtener-vector-de-precios-de-renta-variable" class="toc-h2 toc-link" data-title="Obtener vector de precios de renta variable">Obtener vector de precios de renta variable</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#errores" class="toc-h1 toc-link" data-title="Errores">Errores</a>
           </li>
       </ul>
         <ul class="toc-footer">
-            <li><a href='#'>Sign Up for a Developer Key</a></li>
+            <li><a href='#'>Portal del desarrollador</a></li>
             <li><a href='https://github.com/slatedocs/slate'>Documentation Powered by Slate</a></li>
         </ul>
     </div>
     <div class="page-wrapper">
       <div class="dark-box"></div>
       <div class="content">
-        <h1 id='introduction'>Introduction</h1>
-<p>Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.</p>
+        <h1 id='getting-started'>Getting Started</h1><h2 id='registro'>Registro</h2>
+<p>Entrar al <a href="https://d32sbd4rsmbmrc.cloudfront.net/">Portal del Desarrollador</a> y en la parte superior izquierda hacer click en &#39;Registro&#39;.</p>
 
-<p>We have language bindings in Shell, Ruby, Python, and JavaScript! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.</p>
+<p>Una vez abierto el formulario, llenar los datos que se solicitan. Es muy importante que el correo que se coloque sea válido porque se enviará un correo de verificación.</p>
 
-<p>This example API documentation page was created with <a href="https://github.com/slatedocs/slate">Slate</a>. Feel free to edit it and use it as a base for your own API&#39;s documentation.</p>
-<h1 id='authentication'>Authentication</h1>
+<p>Posteriormente se mostrará la opcion de introducir el código de confirmación enviado por correo y con esto el usuario quedaría registrador y aprobado.</p>
+<h2 id='login-al-portal-del-desarrollador'>Login al portal del desarrollador</h2>
+<p>Una vez registrado, ya podrás hacer uso del portal del desarrollador y acceder a las APIs.</p>
+
+<p>Entrar al <a href="https://d32sbd4rsmbmrc.cloudfront.net/">Portal del Desarrollador</a> y en la parte superior izquierda hacer click en &#39;Autenticar&#39;.</p>
+
+<p>Introducir los datos del formulario que se solicitan y ya quedará autenticado.</p>
+<h2 id='suscribirse-a-un-api'>Suscribirse a un API</h2>
+<p>Una vez autenticado en el portal, en la barra de navegación en la parte superior izquierda aparecerá una opción llamada &#39;Mis APIs&#39;.</p>
+
+<p>Al seleccionarla se podrán listar todas las APIs disponibles de duqto en el menú a la izquierda. </p>
+
+<p>Cuando se selecciona una de estas, en la parte central se mostrará en swagger y el botón de suscribirse.</p>
+
+<p>Es importante entender que aunque se puedan visualizar las APIs si el usuario no se suscribe a las mismas no podrá posteriormente acceder a ellas.</p>
+<h2 id='mi-espacio'>Mi espacio</h2>
+<p>Una vez autenticado en el portal, aparecerá en la parte superior derecha una opción llamada &#39;Mi espacio&#39; en ella se podrán visualizar 3 cosas importantes:
+1. El API KEY del usuario.
+2. Las restricciones de uso de las APIs (si es que está suscrito a alguna)
+3. El histórico de request a las APIs (si es que está suscrito a alguna)</p>
+<h1 id='autenticacion'>Autenticación</h1>
 <blockquote>
-<p>To authorize, use this code:</p>
+<p>La autorización está basada en el API KEY:</p>
 </blockquote>
-<div class="highlight"><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-</code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="p">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
+<div class="highlight"><pre class="highlight shell tab-shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
 curl <span class="s2">"api_endpoint_here"</span> <span class="se">\</span>
-  <span class="nt">-H</span> <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">kittn</span><span class="dl">'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="dl">'</span><span class="s1">meowmeowmeow</span><span class="dl">'</span><span class="p">);</span>
+  <span class="nt">-H</span> <span class="s2">"X-API-KEY: your-api-key"</span>
 </code></pre></div>
 <blockquote>
-<p>Make sure to replace <code>meowmeowmeow</code> with your API key.</p>
+<p>Asegúrate de remplazar <code>your-api-key</code> con tu API KEY obtenido en la sección &#39;Mi Espacio&#39;.</p>
 </blockquote>
 
-<p>Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our <a href="http://example.com/developers">developer portal</a>.</p>
+<p>duqto usa API KEYs para permitir peticiones. Puedes registrarte y suscribirte en nuestro <a href="https://d32sbd4rsmbmrc.cloudfront.net/">Portal de Desarrolladores</a>.</p>
 
-<p>Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:</p>
+<p>duqto espera que el API KEY esté incluido en todas las peticiones a los servicios en un header de la siguiente forma:</p>
 
-<p><code>Authorization: meowmeowmeow</code></p>
+<p><code>X-API-KEY: your-api-key</code></p>
 
 <aside class="notice">
-You must replace <code>meowmeowmeow</code> with your personal API key.
+Debes remplazar <code>your-api-key</code> con tu api key personal obtenido en la sección 'Mi Espacio' del portal del desarrollador.
 </aside>
-<h1 id='kittens'>Kittens</h1><h2 id='get-all-kittens'>Get All Kittens</h2><div class="highlight"><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span>
-</code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="p">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="n">kittens</span><span class="p">.</span><span class="n">get</span><span class="p">()</span>
-</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens"</span> <span class="se">\</span>
-  <span class="nt">-H</span> <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">kittn</span><span class="dl">'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="dl">'</span><span class="s1">meowmeowmeow</span><span class="dl">'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">kittens</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="kd">get</span><span class="p">();</span>
+<h1 id='vector-de-precios'>Vector de Precios</h1><h2 id='obtener-vector-de-precios-de-renta-fija'>Obtener Vector de Precios de Renta Fija</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">-X</span> GET <span class="s2">"https://p2rtlb0c1e.execute-api.us-east-1.amazonaws.com/dev/vector-precios/renta-fija/{bolsa}/{fecha}"</span> <span class="se">\</span>
+<span class="nt">-H</span> <span class="s2">"accept: application/json"</span> 
+<span class="nt">-H</span> <span class="s2">"x-api-key: your-api-key"</span>
 </code></pre></div>
 <blockquote>
-<p>The above command returns JSON structured like this:</p>
+<p>El comando anterior devuelve un json parecido a este:</p>
 </blockquote>
-<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fluffums"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"calico"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">]</span><span class="w">
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"statusCode"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"nextMarker"</span><span class="p">:</span><span class="w"> </span><span class="s2">"VlAjQlZRIzIwMjItMDMtMjV8NTcxMDEwMTAwMDAxMjQwMTI4"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"creationDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-03-25T04:01:27.311Z"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"titleCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"005020300001250115"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"qualification"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AAA"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"issuer"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BCO. BOLIVARIANO"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OCAS"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"issuedDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"15-Jan-20"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"expirationDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"15-Jan-25"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"interestRate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"7.070%"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"readjustmentForm"</span><span class="p">:</span><span class="w"> </span><span class="s2">"TPR BCE + 1,5%"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"referenceRate"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"margin"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"discountRate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"7.7687%"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"equivalentPerformance"</span><span class="p">:</span><span class="w"> </span><span class="s2">"7.6234%"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"price"</span><span class="p">:</span><span class="w"> </span><span class="s2">"98.4775%"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"creationDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-03-25T04:01:27.311Z"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"titleCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"007010500001241220"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"qualification"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AAA"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"issuer"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BANCO PICHINCHA C.A."</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OBL CLASE A"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"issuedDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"20-Dec-19"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"expirationDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"20-Dec-24"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"interestRate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5.870%"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"readjustmentForm"</span><span class="p">:</span><span class="w"> </span><span class="s2">"TASA LIBOR 12M+ SPREAD"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"referenceRate"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"margin"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"discountRate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5.8828%"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"equivalentPerformance"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5.7573%"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"price"</span><span class="p">:</span><span class="w"> </span><span class="s2">"99.9814%"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
 </span></code></pre></div>
-<p>This endpoint retrieves all kittens.</p>
+<p>Este endpoint devuelve una página de con la información del vector de precios - rentas fijas por bolsa de valores y fecha.</p>
 <h3 id='http-request'>HTTP Request</h3>
-<p><code>GET http://example.com/api/kittens</code></p>
-<h3 id='query-parameters'>Query Parameters</h3>
+<p><code>GET https://p2rtlb0c1e.execute-api.us-east-1.amazonaws.com/dev/vector-precios/renta-fija/{bolsa}/{fecha}?marker={marker}</code></p>
+<h3 id='parametros'>Parámetros</h3>
 <table><thead>
 <tr>
-<th>Parameter</th>
-<th>Default</th>
-<th>Description</th>
+<th>Parámetro</th>
+<th>Tipo</th>
+<th>Obligatorio</th>
+<th>Descripción</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>include_cats</td>
-<td>false</td>
-<td>If set to true, the result will also include cats.</td>
+<td>bolsa</td>
+<td>Path</td>
+<td>Sí</td>
+<td>Debe incluir el identificador de la bolsa de valores a la cual buscar, por ejemplo BVQ para la bolsa de valores de Quito</td>
 </tr>
 <tr>
-<td>available</td>
-<td>true</td>
-<td>If set to false, the result will include kittens that have already been adopted.</td>
+<td>fecha</td>
+<td>Path</td>
+<td>Sí</td>
+<td>La fecha del vector de precios diario en formato YYYY-MM-DD, por ejemplo 2022-03-26.</td>
+</tr>
+<tr>
+<td>marker</td>
+<td>Query</td>
+<td>No</td>
+<td>En el caso que se se esté paginando, se debe enviar este parámetro para obtener la próxima página.</td>
 </tr>
 </tbody></table>
-
-<aside class="success">
-Remember — a happy kitten is an authenticated kitten!
-</aside>
-<h2 id='get-a-specific-kitten'>Get a Specific Kitten</h2><div class="highlight"><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="p">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="n">kittens</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens/2"</span> <span class="se">\</span>
-  <span class="nt">-H</span> <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">kittn</span><span class="dl">'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="dl">'</span><span class="s1">meowmeowmeow</span><span class="dl">'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+<h2 id='obtener-vector-de-precios-de-renta-variable'>Obtener vector de precios de renta variable</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">-X</span> GET <span class="s2">"https://p2rtlb0c1e.execute-api.us-east-1.amazonaws.com/dev/vector-precios/renta-variable/{bolsa}/{fecha}"</span> <span class="se">\</span>
+<span class="nt">-H</span> <span class="s2">"accept: application/json"</span> <span class="se">\ </span>
+<span class="nt">-H</span> <span class="s2">"x-api-key: your-api-key"</span>
 </code></pre></div>
 <blockquote>
-<p>The above command returns JSON structured like this:</p>
+<p>El comando anterior devuelve un json parecido a este:</p>
 </blockquote>
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
+  </span><span class="nl">"statusCode"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"creationDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-03-26T04:00:19.280Z"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"issuer"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ALICOSTA BK HOLDING"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"bvqRuedas"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"bvqPresencia"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.00%"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"bvqPrecioCierre"</span><span class="p">:</span><span class="w"> </span><span class="s2">"  *  "</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"bvgRuedas"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"bvgPresencia"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.00%"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"bvgPrecioCierre"</span><span class="p">:</span><span class="w"> </span><span class="s2">" * "</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"precioCierreNacional"</span><span class="p">:</span><span class="w"> </span><span class="s2">"  *  "</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"creationDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-03-26T04:00:19.280Z"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"issuer"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BEVERAGE BRAND &amp; PATENTS COMPANY BBPC S.A"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"bvqRuedas"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"bvqPresencia"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.61%"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"bvqPrecioCierre"</span><span class="p">:</span><span class="w"> </span><span class="s2">" 60.00 "</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"bvgRuedas"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"bvgPresencia"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.61%"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"bvgPrecioCierre"</span><span class="p">:</span><span class="w"> </span><span class="s2">" 59.00 "</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"precioCierreNacional"</span><span class="p">:</span><span class="w"> </span><span class="s2">" 59.00 "</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div>
-<p>This endpoint retrieves a specific kitten.</p>
-
-<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
+<p>Este endpoint devuelve una página de con la información del vector de precios - rentas variable por bolsa de valores y fecha.</p>
 <h3 id='http-request-2'>HTTP Request</h3>
-<p><code>GET http://example.com/kittens/&lt;ID&gt;</code></p>
-<h3 id='url-parameters'>URL Parameters</h3>
+<p><code>GET https://p2rtlb0c1e.execute-api.us-east-1.amazonaws.com/dev/vector-precios/renta-variable/{bolsa}/{fecha}?marker={marker}</code></p>
+<h3 id='parametros-2'>Parámetros</h3>
 <table><thead>
 <tr>
-<th>Parameter</th>
-<th>Description</th>
+<th>Parámetro</th>
+<th>Tipo</th>
+<th>Obligatorio</th>
+<th>Descripción</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>ID</td>
-<td>The ID of the kitten to retrieve</td>
+<td>bolsa</td>
+<td>Path</td>
+<td>Sí</td>
+<td>Debe incluir el identificador de la bolsa de valores a la cual buscar, por ejemplo BVQ para la bolsa de valores de Quito</td>
+</tr>
+<tr>
+<td>fecha</td>
+<td>Path</td>
+<td>Sí</td>
+<td>La fecha del vector de precios diario en formato YYYY-MM-DD, por ejemplo 2022-03-26.</td>
+</tr>
+<tr>
+<td>marker</td>
+<td>Query</td>
+<td>No</td>
+<td>En el caso que se se esté paginando, se debe enviar este parámetro para obtener la próxima página.</td>
 </tr>
 </tbody></table>
-<h2 id='delete-a-specific-kitten'>Delete a Specific Kitten</h2><div class="highlight"><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="p">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="n">kittens</span><span class="p">.</span><span class="n">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens/2"</span> <span class="se">\</span>
-  <span class="nt">-X</span> DELETE <span class="se">\</span>
-  <span class="nt">-H</span> <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">kittn</span><span class="dl">'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="dl">'</span><span class="s1">meowmeowmeow</span><span class="dl">'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
-</code></pre></div>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"deleted"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">":("</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre></div>
-<p>This endpoint deletes a specific kitten.</p>
-<h3 id='http-request-3'>HTTP Request</h3>
-<p><code>DELETE http://example.com/kittens/&lt;ID&gt;</code></p>
-<h3 id='url-parameters-2'>URL Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>ID</td>
-<td>The ID of the kitten to delete</td>
-</tr>
-</tbody></table>
-<h1 id='errors'>Errors</h1>
-<aside class="notice">
-This error section is stored in a separate file in <code>includes/_errors.md</code>. Slate allows you to optionally separate out your docs into many files...just save them to the <code>includes</code> folder and add them to the top of your <code>index.md</code>'s frontmatter. Files are included in the order listed.
-</aside>
-
-<p>The Kittn API uses the following error codes:</p>
+<h1 id='errores'>Errores</h1>
+<p>Los código de errores en los status http de nuestras APIs son los siguientes:</p>
 
 <table><thead>
 <tr>
@@ -541,47 +555,43 @@ This error section is stored in a separate file in <code>includes/_errors.md</co
 </thead><tbody>
 <tr>
 <td>400</td>
-<td>Bad Request -- Your request is invalid.</td>
+<td>Bad Request -- La petición efectuada no es válida, revise los parámetros.</td>
 </tr>
 <tr>
 <td>401</td>
-<td>Unauthorized -- Your API key is wrong.</td>
+<td>Unauthorized -- El API KEY utilizado no es válido o su cuenta no está activa.</td>
 </tr>
 <tr>
 <td>403</td>
-<td>Forbidden -- The kitten requested is hidden for administrators only.</td>
+<td>Forbidden -- Usted no tiene acceso a este recurso.</td>
 </tr>
 <tr>
 <td>404</td>
-<td>Not Found -- The specified kitten could not be found.</td>
+<td>Not Found -- El recurso que está intentando acceder no exsite.</td>
 </tr>
 <tr>
 <td>405</td>
-<td>Method Not Allowed -- You tried to access a kitten with an invalid method.</td>
+<td>Method Not Allowed -- El método http que está utilizando no es el apropiado para el recurso.</td>
 </tr>
 <tr>
 <td>406</td>
-<td>Not Acceptable -- You requested a format that isn&#39;t json.</td>
+<td>Not Acceptable -- El formato que está usando para acceder al recurso no es un json valido.</td>
 </tr>
 <tr>
 <td>410</td>
-<td>Gone -- The kitten requested has been removed from our servers.</td>
-</tr>
-<tr>
-<td>418</td>
-<td>I&#39;m a teapot.</td>
+<td>Gone -- El recurso que está intentado acceder ha sido removido de nuestro servidores.</td>
 </tr>
 <tr>
 <td>429</td>
-<td>Too Many Requests -- You&#39;re requesting too many kittens! Slow down!</td>
+<td>Too Many Requests -- Ha excedido la cuota de peticiones mensuales o concurrentes</td>
 </tr>
 <tr>
 <td>500</td>
-<td>Internal Server Error -- We had a problem with our server. Try again later.</td>
+<td>Internal Server Error -- Ha ocurrido un error interno en nuestros servidores y estamos trabajando en ello.</td>
 </tr>
 <tr>
 <td>503</td>
-<td>Service Unavailable -- We&#39;re temporarily offline for maintenance. Please try again later.</td>
+<td>Service Unavailable -- El servicio está temporalmente fuera de servicio debido a mantenimientos.</td>
 </tr>
 </tbody></table>
 
@@ -589,9 +599,6 @@ This error section is stored in a separate file in <code>includes/_errors.md</co
       <div class="dark-box">
           <div class="lang-selector">
                 <a href="#" data-language-name="shell">shell</a>
-                <a href="#" data-language-name="ruby">ruby</a>
-                <a href="#" data-language-name="python">python</a>
-                <a href="#" data-language-name="javascript">javascript</a>
           </div>
       </div>
     </div>
