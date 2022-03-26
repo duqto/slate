@@ -1,22 +1,17 @@
-# Errors
+# Errores
 
-<aside class="notice">
-This error section is stored in a separate file in <code>includes/_errors.md</code>. Slate allows you to optionally separate out your docs into many files...just save them to the <code>includes</code> folder and add them to the top of your <code>index.md</code>'s frontmatter. Files are included in the order listed.
-</aside>
-
-The Kittn API uses the following error codes:
+Los código de errores en los status http de nuestras APIs son los siguientes:
 
 
-Error Code | Meaning
----------- | -------
-400 | Bad Request -- Your request is invalid.
-401 | Unauthorized -- Your API key is wrong.
-403 | Forbidden -- The kitten requested is hidden for administrators only.
-404 | Not Found -- The specified kitten could not be found.
-405 | Method Not Allowed -- You tried to access a kitten with an invalid method.
-406 | Not Acceptable -- You requested a format that isn't json.
-410 | Gone -- The kitten requested has been removed from our servers.
-418 | I'm a teapot.
-429 | Too Many Requests -- You're requesting too many kittens! Slow down!
-500 | Internal Server Error -- We had a problem with our server. Try again later.
-503 | Service Unavailable -- We're temporarily offline for maintenance. Please try again later.
+| Error Code | Meaning                                                                                                    |
+|------------|------------------------------------------------------------------------------------------------------------|
+| 400        | Bad Request -- La petición efectuada no es válida, revise los parámetros.                                  |
+| 401        | Unauthorized -- El API KEY utilizado no es válido o su cuenta no está activa.                              |
+| 403        | Forbidden -- Usted no tiene acceso a este recurso.                                                         |
+| 404        | Not Found -- El recurso que está intentando acceder no exsite.                                             |
+| 405        | Method Not Allowed -- El método http que está utilizando no es el apropiado para el recurso.               |
+| 406        | Not Acceptable -- El formato que está usando para acceder al recurso no es un json valido.                 |
+| 410        | Gone -- El recurso que está intentado acceder ha sido removido de nuestro servidores.                      |                                                                               |
+| 429        | Too Many Requests -- Ha excedido la cuota de peticiones mensuales o concurrentes                           |
+| 500        | Internal Server Error -- Ha ocurrido un error interno en nuestros servidores y estamos trabajando en ello. |
+| 503        | Service Unavailable -- El servicio está temporalmente fuera de servicio debido a mantenimientos.           |

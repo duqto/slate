@@ -1,14 +1,11 @@
 ---
-title: API Reference
+title: Manual de Usuario
 
 language_tabs: # must be one of https://git.io/vQNgJ
   - shell
-  - ruby
-  - python
-  - javascript
 
 toc_footers:
-  - <a href='#'>Sign Up for a Developer Key</a>
+  - <a href='#'>Portal del desarrollador</a>
   - <a href='https://github.com/slatedocs/slate'>Documentation Powered by Slate</a>
 
 includes:
@@ -20,226 +17,185 @@ code_clipboard: true
 
 meta:
   - name: description
-    content: Documentation for the Kittn API
+    content: Documentación de las APIs de duqto.
 ---
 
-# Introduction
+# Getting Started
 
-Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.
+## Registro
 
-We have language bindings in Shell, Ruby, Python, and JavaScript! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.
+Entrar al [Portal del Desarrollador](https://d32sbd4rsmbmrc.cloudfront.net/) y en la parte superior izquierda hacer click en 'Registro'.
 
-This example API documentation page was created with [Slate](https://github.com/slatedocs/slate). Feel free to edit it and use it as a base for your own API's documentation.
+Una vez abierto el formulario, llenar los datos que se solicitan. Es muy importante que el correo que se coloque sea válido porque se enviará un correo de verificación.
 
-# Authentication
+Posteriormente se mostrará la opcion de introducir el código de confirmación enviado por correo y con esto el usuario quedaría registrador y aprobado.
 
-> To authorize, use this code:
+## Login al portal del desarrollador
 
-```ruby
-require 'kittn'
+Una vez registrado, ya podrás hacer uso del portal del desarrollador y acceder a las APIs.
 
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-```
+Entrar al [Portal del Desarrollador](https://d32sbd4rsmbmrc.cloudfront.net/) y en la parte superior izquierda hacer click en 'Autenticar'.
 
-```python
-import kittn
+Introducir los datos del formulario que se solicitan y ya quedará autenticado.
 
-api = kittn.authorize('meowmeowmeow')
-```
+## Suscribirse a un API
+
+Una vez autenticado en el portal, en la barra de navegación en la parte superior izquierda aparecerá una opción llamada 'Mis APIs'.
+
+Al seleccionarla se podrán listar todas las APIs disponibles de duqto en el menú a la izquierda. 
+
+Cuando se selecciona una de estas, en la parte central se mostrará en swagger y el botón de suscribirse.
+
+Es importante entender que aunque se puedan visualizar las APIs si el usuario no se suscribe a las mismas no podrá posteriormente acceder a ellas.
+
+## Mi espacio
+
+Una vez autenticado en el portal, aparecerá en la parte superior derecha una opción llamada 'Mi espacio' en ella se podrán visualizar 3 cosas importantes:
+1. El API KEY del usuario.
+2. Las restricciones de uso de las APIs (si es que está suscrito a alguna)
+3. El histórico de request a las APIs (si es que está suscrito a alguna)
+
+
+# Autenticación
+
+> La autorización está basada en el API KEY:
 
 ```shell
 # With shell, you can just pass the correct header with each request
 curl "api_endpoint_here" \
-  -H "Authorization: meowmeowmeow"
+  -H "X-API-KEY: your-api-key"
 ```
 
-```javascript
-const kittn = require('kittn');
+> Asegúrate de remplazar `your-api-key` con tu API KEY obtenido en la sección 'Mi Espacio'.
 
-let api = kittn.authorize('meowmeowmeow');
-```
+duqto usa API KEYs para permitir peticiones. Puedes registrarte y suscribirte en nuestro [Portal de Desarrolladores](https://d32sbd4rsmbmrc.cloudfront.net/).
 
-> Make sure to replace `meowmeowmeow` with your API key.
+duqto espera que el API KEY esté incluido en todas las peticiones a los servicios en un header de la siguiente forma:
 
-Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our [developer portal](http://example.com/developers).
-
-Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:
-
-`Authorization: meowmeowmeow`
+`X-API-KEY: your-api-key`
 
 <aside class="notice">
-You must replace <code>meowmeowmeow</code> with your personal API key.
+Debes remplazar <code>your-api-key</code> con tu api key personal obtenido en la sección 'Mi Espacio' del portal del desarrollador.
 </aside>
 
-# Kittens
+# Vector de Precios
 
-## Get All Kittens
-
-```ruby
-require 'kittn'
-
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-api.kittens.get
-```
-
-```python
-import kittn
-
-api = kittn.authorize('meowmeowmeow')
-api.kittens.get()
-```
+## Obtener Vector de Precios de Renta Fija
 
 ```shell
-curl "http://example.com/api/kittens" \
-  -H "Authorization: meowmeowmeow"
+curl -X GET "https://p2rtlb0c1e.execute-api.us-east-1.amazonaws.com/dev/vector-precios/renta-fija/{bolsa}/{fecha}" \
+-H "accept: application/json" 
+-H "x-api-key: your-api-key"
 ```
 
-```javascript
-const kittn = require('kittn');
-
-let api = kittn.authorize('meowmeowmeow');
-let kittens = api.kittens.get();
-```
-
-> The above command returns JSON structured like this:
-
-```json
-[
-  {
-    "id": 1,
-    "name": "Fluffums",
-    "breed": "calico",
-    "fluffiness": 6,
-    "cuteness": 7
-  },
-  {
-    "id": 2,
-    "name": "Max",
-    "breed": "unknown",
-    "fluffiness": 5,
-    "cuteness": 10
-  }
-]
-```
-
-This endpoint retrieves all kittens.
-
-### HTTP Request
-
-`GET http://example.com/api/kittens`
-
-### Query Parameters
-
-Parameter | Default | Description
---------- | ------- | -----------
-include_cats | false | If set to true, the result will also include cats.
-available | true | If set to false, the result will include kittens that have already been adopted.
-
-<aside class="success">
-Remember — a happy kitten is an authenticated kitten!
-</aside>
-
-## Get a Specific Kitten
-
-```ruby
-require 'kittn'
-
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-api.kittens.get(2)
-```
-
-```python
-import kittn
-
-api = kittn.authorize('meowmeowmeow')
-api.kittens.get(2)
-```
-
-```shell
-curl "http://example.com/api/kittens/2" \
-  -H "Authorization: meowmeowmeow"
-```
-
-```javascript
-const kittn = require('kittn');
-
-let api = kittn.authorize('meowmeowmeow');
-let max = api.kittens.get(2);
-```
-
-> The above command returns JSON structured like this:
+> El comando anterior devuelve un json parecido a este:
 
 ```json
 {
-  "id": 2,
-  "name": "Max",
-  "breed": "unknown",
-  "fluffiness": 5,
-  "cuteness": 10
+  "statusCode": 200,
+  "nextMarker": "VlAjQlZRIzIwMjItMDMtMjV8NTcxMDEwMTAwMDAxMjQwMTI4",
+  "data": [
+    {
+      "creationDate": "2022-03-25T04:01:27.311Z",
+      "titleCode": "005020300001250115",
+      "qualification": "AAA",
+      "issuer": "BCO. BOLIVARIANO",
+      "title": "OCAS",
+      "issuedDate": "15-Jan-20",
+      "expirationDate": "15-Jan-25",
+      "interestRate": "7.070%",
+      "readjustmentForm": "TPR BCE + 1,5%",
+      "referenceRate": "",
+      "margin": "",
+      "discountRate": "7.7687%",
+      "equivalentPerformance": "7.6234%",
+      "price": "98.4775%"
+    },
+    {
+      "creationDate": "2022-03-25T04:01:27.311Z",
+      "titleCode": "007010500001241220",
+      "qualification": "AAA",
+      "issuer": "BANCO PICHINCHA C.A.",
+      "title": "OBL CLASE A",
+      "issuedDate": "20-Dec-19",
+      "expirationDate": "20-Dec-24",
+      "interestRate": "5.870%",
+      "readjustmentForm": "TASA LIBOR 12M+ SPREAD",
+      "referenceRate": "",
+      "margin": "",
+      "discountRate": "5.8828%",
+      "equivalentPerformance": "5.7573%",
+      "price": "99.9814%"
+    }
+  ]
 }
 ```
 
-This endpoint retrieves a specific kitten.
-
-<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
+Este endpoint devuelve una página de con la información del vector de precios - rentas fijas por bolsa de valores y fecha.
 
 ### HTTP Request
 
-`GET http://example.com/kittens/<ID>`
+`GET https://p2rtlb0c1e.execute-api.us-east-1.amazonaws.com/dev/vector-precios/renta-fija/{bolsa}/{fecha}?marker={marker}`
 
-### URL Parameters
+### Parámetros
 
-Parameter | Description
---------- | -----------
-ID | The ID of the kitten to retrieve
+| Parámetro | Tipo  | Obligatorio | Descripción                                                                                                              |
+|-----------|-------|-------------|--------------------------------------------------------------------------------------------------------------------------|
+| bolsa     | Path  | Sí          | Debe incluir el identificador de la bolsa de valores a la cual buscar, por ejemplo BVQ para la bolsa de valores de Quito |
+| fecha     | Path  | Sí          | La fecha del vector de precios diario en formato YYYY-MM-DD, por ejemplo 2022-03-26.                                     |
+| marker    | Query | No          | En el caso que se se esté paginando, se debe enviar este parámetro para obtener la próxima página.                       |
 
-## Delete a Specific Kitten
 
-```ruby
-require 'kittn'
-
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-api.kittens.delete(2)
-```
-
-```python
-import kittn
-
-api = kittn.authorize('meowmeowmeow')
-api.kittens.delete(2)
-```
+## Obtener vector de precios de renta variable
 
 ```shell
-curl "http://example.com/api/kittens/2" \
-  -X DELETE \
-  -H "Authorization: meowmeowmeow"
+curl -X GET "https://p2rtlb0c1e.execute-api.us-east-1.amazonaws.com/dev/vector-precios/renta-variable/{bolsa}/{fecha}" \
+-H "accept: application/json" \ 
+-H "x-api-key: your-api-key"
 ```
 
-```javascript
-const kittn = require('kittn');
-
-let api = kittn.authorize('meowmeowmeow');
-let max = api.kittens.delete(2);
-```
-
-> The above command returns JSON structured like this:
+> El comando anterior devuelve un json parecido a este:
 
 ```json
 {
-  "id": 2,
-  "deleted" : ":("
+  "statusCode": 200,
+  "data": [
+    {
+      "creationDate": "2022-03-26T04:00:19.280Z",
+      "issuer": "ALICOSTA BK HOLDING",
+      "bvqRuedas": "0",
+      "bvqPresencia": "0.00%",
+      "bvqPrecioCierre": "  *  ",
+      "bvgRuedas": "0",
+      "bvgPresencia": "0.00%",
+      "bvgPrecioCierre": " * ",
+      "precioCierreNacional": "  *  "
+    },
+    {
+      "creationDate": "2022-03-26T04:00:19.280Z",
+      "issuer": "BEVERAGE BRAND & PATENTS COMPANY BBPC S.A",
+      "bvqRuedas": "1",
+      "bvqPresencia": "1.61%",
+      "bvqPrecioCierre": " 60.00 ",
+      "bvgRuedas": "1",
+      "bvgPresencia": "1.61%",
+      "bvgPrecioCierre": " 59.00 ",
+      "precioCierreNacional": " 59.00 "
+    }
+  ]
 }
 ```
 
-This endpoint deletes a specific kitten.
+Este endpoint devuelve una página de con la información del vector de precios - rentas variable por bolsa de valores y fecha.
 
 ### HTTP Request
 
-`DELETE http://example.com/kittens/<ID>`
+`GET https://p2rtlb0c1e.execute-api.us-east-1.amazonaws.com/dev/vector-precios/renta-variable/{bolsa}/{fecha}?marker={marker}`
 
-### URL Parameters
+### Parámetros
 
-Parameter | Description
---------- | -----------
-ID | The ID of the kitten to delete
-
+| Parámetro | Tipo  | Obligatorio | Descripción                                                                                                              |
+|-----------|-------|-------------|--------------------------------------------------------------------------------------------------------------------------|
+| bolsa     | Path  | Sí          | Debe incluir el identificador de la bolsa de valores a la cual buscar, por ejemplo BVQ para la bolsa de valores de Quito |
+| fecha     | Path  | Sí          | La fecha del vector de precios diario en formato YYYY-MM-DD, por ejemplo 2022-03-26.                                     |
+| marker    | Query | No          | En el caso que se se esté paginando, se debe enviar este parámetro para obtener la próxima página.                       |
